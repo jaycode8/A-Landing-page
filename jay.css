@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: #ccc;
+}
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    z-index: 1;
+}
+.logo{
+    position: absolute;
+    left: 10px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-family: 'Righteous', cursive;
+}
+.logo span{
+    color: red;
+    font-family: 'Righteous', cursive;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 5px 20px;
+}
+ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #121212;
+    font-weight: 1000;
+    font-family: 'Merienda', cursive;
+}
+nav ul li::after{
+    content: '';
+    background: red;
+    width: 10%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: .8s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+#bars, #times{
+    position: absolute;
+    right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+.side-bar{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+.socials{
+    display: flex;
+    flex-direction: column;
+}
+.socials i{
+    margin: 10px 0;
+    font-size: 20px;
+    color: #555;
+}
+.jaymoh{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-basis: 100%;
+}
+.col-2,.col-2b{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.col-2b{
+    align-items: flex-start;
+}
+.text-box{
+    width: 60%;
+    padding: 10px;
+    margin-top: 20%;
+}
+.text-box h1{
+    font-size: 30px;
+    font-weight: 1000;
+    font-family: 'Merienda One', cursive;
+}
+p{
+    font-family: 'Dosis', sans-serif;
+}
+.three{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 0 0 ;
+}
+.three section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.three section h3{
+    font-family: 'Handlee', cursive;
+}
+
+.bg{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: yellow;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-left: 50px;
+}
+.bg img{
+    width: 590px;
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 8px #555);
+}
+.coch{
+    width: 130px;
+    transform: rotate(-10deg);
+    position: absolute;
+    left: 80px;
+    bottom: 50px;
+    cursor: pointer;
+}
+.coch:nth-child(3){
+    margin-left: 15%;
+    transform: rotate(0deg);
+}
+.sideB{
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+}
+.sideB .card{
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 6px 0;
+}
+.sideB .card img{
+    width: 100px;
+}
+.sideB .card h5{
+    font-size: 12px;
+    font-family: 'Handlee', cursive;
+}
+.sideB .card p{
+    font-size: 10px;
+}
+.maneno{
+    width: 300px;
+    height: 120px;
+    margin-top: 20px;
+}
+.comm{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+.comm section{
+    margin-top: 10px;
+}
+.comm section h2{
+    font-family: 'Handlee', cursive;
+}
+
+
+
+/* ========================================Responsivenes======================================= */
+@media screen and (max-width:1010px){
+    .text-box{
+        width: 350px;
+    }
+    .bg{
+        width: 250px;
+        height: 250px;
+    }
+    .bg img{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:790px){
+    header{
+        justify-content: space-between;
+    }
+    .logo{
+        position: unset;
+        margin-left: 20px;
+    }
+    .jaymoh{
+        flex-direction: column;
+    }
+    .col-2b{
+        align-items: center;
+    }
+    .text-box{
+        width: 500px;
+    }
+    .bg{
+        width: 350px;
+        height: 350px;
+    }
+    .bg img{
+        width: 480px;
+    }
+}
+
+@media screen and (max-width:690px){
+    #nav{
+        width: 100%;
+        height: 40vh;
+        background-color: #555;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -500px;
+        z-index: 1;
+        left: 0;
+        transition: all 2s;
+    }
+    #nav.active{
+        top: 0px;
+    }
+    #nav ul li{
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 50px 0;
+        text-align: center;
+    }
+    ul li a{
+        color: #fff;
+    }
+    #bars, #times{
+        display: block;
+    }
+    #times{
+        position: absolute;
+        top: 10px;
+        color: #fff;
+    }
+    .logo{
+        margin-top: 20px;
+    }
+    .text-box{
+        width: 80%;
+    }
+    .sideB{
+        width: 40px;
+    }
+    .sideB .card:last-child{
+        margin-bottom: 100px;
+    }
+    .sideB .card{
+        width: 70px;
+        height: 100px;
+    }
+    .sideB .card img{
+        width: 70px;
+    }
+    .sideB .card h5{
+        font-size: 10px;
+    }
+    .sideB .card p{
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:690px){
+    .bg{
+        width: 250px;
+        height: 250px;
+    }
+    .bg img{
+        width: 350px;
+    }
+    .text-box h1{
+        font-size: 25px;
+    }
+    .text-box p{
+        font-size: 15px;
+    }
+    .three section h3{
+        font-size: 12px;
+    }
+    .three section p{
+        font-size: 10px;
+    }
+    .side-bar{
+        width: 100px;
+    }
+}
